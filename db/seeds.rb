@@ -27,7 +27,39 @@ users = [
     },
 ]
 
+pins = [
+    {
+        "id":1,
+        "user_id": 1,
+        "long": 29.33,
+        "lat": 98
+    },
+    {
+        "id":2,
+        "user_id": 1,
+        "long": 43.1,
+        "lat": 84.33
+    },
+    {
+        "id":3,
+        "user_id": 2,
+        "long": 32,
+        "lat": 55.42
+    },
+    {
+        "id":4,
+        "user_id": 3,
+        "long": 44,
+        "lat": 10.3
+    }
+]
+
 users.each do |user| 
     User.create(user)
 end
+
+pins.each do |pin|
+    Pin.create(pin)
+end
+
 
